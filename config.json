@@ -1,37 +1,11 @@
-{
-  "inbounds": [
-    {
-      "port": 8080,
-      "protocol": "vless",
-      "settings": {
-        "clients": [
-          {
-            "id": "28b2304a-e0fc-4600-91de-41f18ad3164d",
-            "level": 0,
-            "email": "ragnardiscussion@gmail.com"
-          }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/NoorVip"
-        }
-      }
+worker_processes auto;
+events {}
+stream {
+    upstream backend {
+        server server-2.etv2ray.xyz:80;
     }
-  ],
-  "outbounds": [
-    {
-      "protocol": "socks", 
-      "settings": {
-        "servers": [
-          {
-            "address": "server-2.etv2ray.xyz", 
-            "port": 9720
-          }
-        ]
-      }
+    server {
+        listen 8080;
+        proxy_pass backend;
     }
-  ]
 }
