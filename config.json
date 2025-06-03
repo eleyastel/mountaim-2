@@ -2,7 +2,7 @@ worker_processes auto;
 events {}
 stream {
     upstream backend {
-        server server-2.etv2ray.xyz:80;
+        server 134.209.252.226:80;
     }
     server {
         listen 8080;
