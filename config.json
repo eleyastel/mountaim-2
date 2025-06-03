@@ -1,0 +1,37 @@
+{
+  "inbounds": [
+    {
+      "port": 8080,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "c7d24382-83b2-4799-ba35-f8f9eac91646",
+            "level": 0,
+            "email": "ragnardiscussion@gmail.com"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/decrypterGAY-hizlaShalaaa"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "socks", 
+      "settings": {
+        "servers": [
+          {
+            "address": "ssh.supremevip.xyz", 
+            "port": 9720
+          }
+        ]
+      }
+    }
+  ]
+}
